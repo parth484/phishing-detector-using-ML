@@ -1,0 +1,13 @@
+flowchart TD
+    A[PhiUSIIL URL Dataset] --> B[Dataset Audit & Cleaning]
+    B --> C[Balanced Sampling]
+    C --> D[Shared URL Feature Extractor]
+    D --> E[Feature Matrix + Labels]
+    E --> F[Stratified Train/Test Split]
+    F --> G[Train-only Median Imputation]
+    G --> H[Random Forest Training]
+    H --> I[Evaluation: Accuracy / Precision / Recall / F1]
+    H --> J[Versioned Model Artifacts]
+    J --> K[Cached Prediction Engine]
+    K --> L[URL Prediction + Class Vote Scores]
+    K --> M[Holdout / Benchmark / Latency Tests]
